@@ -39,6 +39,14 @@ namespace PersonelKayit
             // TODO: This line of code loads data into the 'personelVeriTabaniDataSet.tbl_Personel' table. You can move, or remove it, as needed.
               this.tbl_PersonelTableAdapter.Fill(this.personelVeriTabaniDataSet.tbl_Personel);
 
+            baglanti.Open();
+            SqlCommand sorgu = new SqlCommand("select  * from iller ", baglanti);
+            SqlDataReader dr = sorgu.ExecuteReader();
+            while (dr.Read())
+            {
+                txtSehir.Items.Add(dr["sehir"]);
+            }
+            baglanti.Close();
         }
 
         private void btnListele_Click(object sender, EventArgs e)
@@ -154,5 +162,8 @@ namespace PersonelKayit
         {
             
         }
+
+        
+        
     }
 }

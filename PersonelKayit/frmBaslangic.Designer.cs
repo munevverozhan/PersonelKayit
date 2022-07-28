@@ -128,6 +128,7 @@ namespace PersonelKayit
             this.txtSehir.Name = "txtSehir";
             this.txtSehir.Size = new System.Drawing.Size(183, 28);
             this.txtSehir.TabIndex = 4;
+//            this.txtSehir.SelectedIndexChanged += new System.EventHandler(this.txtSehir_SelectedIndexChanged);
             // 
             // radioButton2
             // 
@@ -430,6 +431,7 @@ namespace PersonelKayit
             this.lblRadioButton.Size = new System.Drawing.Size(110, 20);
             this.lblRadioButton.TabIndex = 4;
             this.lblRadioButton.Text = "lblRadioButton";
+            this.lblRadioButton.Visible = false;
             this.lblRadioButton.TextChanged += new System.EventHandler(this.lblRadioButton_TextChanged);
             // 
             // frmBaslangic
